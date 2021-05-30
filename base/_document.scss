@@ -1,0 +1,7 @@
+@use 'settings/type';
+
+:root {
+  font-family: type.$font-family-sans;
+  font-size: type.$font-unit;
+  line-height: type.$line-height;
+}
