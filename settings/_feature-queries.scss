@@ -1,0 +1,20 @@
+/// Aliased feature queries. Use to output feature query-enclosed rulesets
+/// via the `feature-query` mixin.
+///
+/// @group feature-queries
+/// @prop {String} key - An alias for the feature query.
+/// @prop {String} value - The declaration(s) to query.
+/// @type Map
+///
+/// @see {mixin} feature-query
+///
+/// @example
+///   $feature-queries: (
+///     'aspect-ratio': '(aspect-ratio: 1)',
+///     'grid': '(display: grid)'
+///   );
+///
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+
+$feature-queries: (
+);

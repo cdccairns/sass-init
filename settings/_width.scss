@@ -1,0 +1,23 @@
+/// The maximum page width.
+///
+/// @group width
+/// @type Number
+/// @access private
+
+$-width-page-max: 90rem;
+
+
+/// Aliased width values.
+///
+/// @group width
+/// @prop {String} key - An alias for the width value.
+/// @prop {Number} value - The actual width value.
+/// @type Map
+///
+/// @example
+///   $width-units: (
+///     'page-max': 90rem
+///   );
+
+$width-units: (
+);

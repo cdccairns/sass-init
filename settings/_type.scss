@@ -1,0 +1,80 @@
+/// The default font unit.
+///
+/// @group type
+/// @type Number
+/// @access private
+
+$-font-unit: calc(0.25vw + 1em);
+
+
+/// Aliased font size values.
+///
+/// @group type
+/// @prop {String} key - An alias for the multiplier value.
+/// @prop {Number} value - The multiplier. When passed to the `font-unit`
+/// function, this value is multiplied by a given unit (e.g. `1em`) in order to
+/// return a valid `font-size` property value.
+/// @type Map
+///
+/// @see font-unit
+///
+/// @example
+///   $font-units: (
+///     'h1': 4,
+///     'h2': 3
+///   );
+
+$font-units: (
+);
+
+
+/// @type List
+/// @group type
+
+$font-family-sans: 'Helvetica', 'Arial', sans-serif;
+
+
+/// @type List
+/// @group type
+
+$font-family-serif: 'Georgia', 'Times', serif;
+
+
+/// @type List
+/// @group type
+
+$font-family-mono: 'Courier', 'Courier New', monospace;
+
+
+/// @type List
+/// @group type
+
+$font-family-display: $font-family-sans;
+
+
+/// Aliased font weight values.
+///
+/// @group type
+/// @prop {String} key - An alias for the property value.
+/// @prop {Number} value - The actual property value.
+/// @type Map
+
+$font-weights: (
+  'thin': 100,
+  'extralight': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'extrabold': 800,
+  'black': 900,
+);
+
+
+/// The default line height ratio.
+///
+/// @group type
+/// @type Number
+
+$line-height: 1.5;

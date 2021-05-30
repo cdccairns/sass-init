@@ -1,0 +1,13 @@
+/// Aliased z-index values.
+///
+/// @group z-index
+/// @prop {String} key - An alias for the z-index value.
+/// @prop {Number} value - The actual z-index value.
+/// @type Map
+
+$z-indexes: (
+  'below': -1,
+  'root': 0,
+  'default': 1,
+  'above': 2,
+);

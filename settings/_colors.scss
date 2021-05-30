@@ -1,0 +1,15 @@
+/// Aliased color values.
+///
+/// @group colors
+/// @prop {String} key - An alias for the color value.
+/// @prop {Color} value - The actual color value.
+/// @type Map
+///
+/// @example
+///   $colors: (
+///     'black': hsl(0, 0, 0),
+///     'white': #FFF
+///   );
+
+$colors: (
+);

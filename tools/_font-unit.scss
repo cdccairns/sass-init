@@ -1,0 +1,24 @@
+@use 'settings/type' as *;
+
+
+/// Return a valid `font-size` property value.
+///
+/// @group type
+/// @param {String} $alias - The font unit alias. This alias must match a key in
+/// the corresponding map.
+/// @param {Number} $unit [1em] - The unit by which the aliased value will be multiplied.
+///
+/// @example
+///   h1 {
+///     font-size: font-unit('<alias>');
+///   }
+
+@function font-unit($alias, $unit: 1em) {
+  @if ((type-of($alias) == 'string' and map-has-key($font-units, $alias)) and type-of($unit) == 'number') {
+    @return ($unit * map-get($font-units, $alias));
+  }
+
+  @else {
+    @error 'The supplied values (#{$alias}, #{$unit}) do not return a valid font unit.';
+  }
+}

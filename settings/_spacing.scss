@@ -1,0 +1,23 @@
+/// The default spacing unit.
+///
+/// @group spacing
+/// @type Number
+/// @access private
+
+$-spacing-unit: 1rem;
+
+
+/// Aliased spacing values.
+///
+/// @group spacing
+/// @prop {String} key - An alias for the spacing value.
+/// @prop {Number} value - The actual spacing value.
+/// @type Map
+///
+/// @example
+///   $spacing-units: (
+///     'default': 1rem
+///   );
+
+$spacing-units: (
+);

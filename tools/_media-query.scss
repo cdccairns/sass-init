@@ -1,0 +1,25 @@
+@use 'settings/media-queries' as *;
+
+
+/// Enclose a ruleset inside a media query.
+///
+/// @group media-queries
+/// @param {String} $alias - The media query alias. This alias must match a
+/// key in the corresponding map.
+///
+/// @example
+///   @include media-query('<alias>') {
+///     /* ... */
+///   }
+
+@mixin media-query($alias) {
+  @if (type-of($alias) == 'string' and map-has-key($media-queries, $alias)) {
+    @media #{map-get($media-queries, $alias)} {
+      @content;
+    }
+  }
+
+  @else {
+    @error 'This media query (#{$alias}) does not return a match.';
+  }
+}

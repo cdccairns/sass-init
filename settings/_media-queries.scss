@@ -1,0 +1,18 @@
+/// Aliased media queries. Use to output media query-enclosed rulesets
+/// via the `media-query` mixin.
+///
+/// @group media-queries
+/// @prop {String} key - An alias for the media query.
+/// @prop {String} value - The media feature(s) to query.
+/// @type Map
+///
+/// @see {mixin} media-query
+///
+/// @example
+///   $media-queries: (
+///     'hover': '(hover: hover) and (pointer: fine)'
+///     'portrait': '(orientation: portrait)',
+///   );
+
+$media-queries: (
+);
