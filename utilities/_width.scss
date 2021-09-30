@@ -1,0 +1,28 @@
+@use 'settings/width' as *;
+
+$-enable-width-classes: false !default;
+$-enable-width-properties: false !default;
+
+$-width-class-properties: (
+  'max-width'
+) !default;
+
+@if ($-enable-width-classes and $-width-class-properties) {
+  @each $property in $-width-class-properties {
+    @each $alias, $unit in $width-units {
+      .u-#{$property}-#{$alias} {
+        #{$property}: #{$unit} !important;
+      }
+    }
+  }
+}
+
+$-width-property-prefix: 'width-' !default;
+
+@if $-enable-width-properties {
+  :root {
+    @each $alias, $unit in $width-units {
+      --#{$-width-property-prefix}#{$alias}: #{$unit};
+    }
+  }
+}

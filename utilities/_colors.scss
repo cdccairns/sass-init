@@ -1,0 +1,29 @@
+@use 'settings/colors' as *;
+
+$-enable-color-classes: false !default;
+$-enable-color-properties: false !default;
+
+$-color-class-properties: (
+  'background-color',
+  'color'
+) !default;
+
+@if ($-enable-color-classes and $-color-class-properties) {
+  @each $property in $-color-class-properties {
+    @each $alias, $color in $colors {
+      .u-#{$property}-#{$alias} {
+        #{$property}: #{$color} !important;
+      }
+    }
+  }
+}
+
+$-color-property-prefix: 'color-' !default;
+
+@if $-enable-color-properties {
+  :root {
+    @each $alias, $color in $colors {
+      --#{$-color-property-prefix}#{$alias}: #{$color};
+    }
+  }
+}

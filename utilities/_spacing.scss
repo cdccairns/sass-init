@@ -1,0 +1,38 @@
+@use 'settings/spacing' as *;
+
+$-enable-spacing-classes: false !default;
+$-enable-spacing-properties: false !default;
+
+$-spacing-class-properties: (
+  'margin',
+  'padding'
+) !default;
+
+$-spacing-class-directions: (
+  'top',
+  'left',
+  'bottom',
+  'right'
+) !default;
+
+@if ($-enable-spacing-classes and $-spacing-class-properties and $-spacing-class-directions) {
+  @each $property in $-spacing-class-properties {
+    @each $direction in $-spacing-class-directions {
+      @each $alias, $unit in $spacing-units {
+        .u-#{$property}-#{$direction}-#{$alias} {
+          #{$property}-#{$direction}: #{$unit} !important;
+        }
+      }
+    }
+  }
+}
+
+$-spacing-property-prefix: 'spacing-' !default;
+
+@if $-enable-spacing-properties {
+  :root {
+    @each $alias, $unit in $spacing-units {
+      --#{$-spacing-property-prefix}#{$alias}: #{$unit};
+    }
+  }
+}

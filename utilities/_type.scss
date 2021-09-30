@@ -1,0 +1,53 @@
+@use 'settings/type' as *;
+
+$-enable-font-weight-classes: false !default;
+$-enable-text-alignment-classes: false !default;
+$-enable-text-decoration-classes: false !default;
+$-enable-text-transform-classes: false !default;
+
+@if $-enable-font-weight-classes {
+  @each $alias, $weight in $font-weights {
+    .u-font-weight-#{$alias} {
+      font-weight: #{$weight} !important;
+    }
+  }
+}
+
+$-text-alignment-class-values: (
+  'left',
+  'center',
+  'right'
+) !default;
+
+@if ($-enable-text-alignment-classes and $-text-alignment-class-values) {
+  @each $value in $-text-alignment-class-values {
+    .u-text-align-#{$value} {
+      text-align: #{$value} !important;
+    }
+  }
+}
+
+$-text-decoration-class-values: (
+  'none'
+) !default;
+
+@if ($-enable-text-decoration-classes and $-text-decoration-class-values) {
+  @each $value in $-text-decoration-class-values {
+    .u-text-decoration-#{$value} {
+      text-decoration: #{$value} !important;
+    }
+  }
+}
+
+$-text-transform-class-values: (
+  'lowercase',
+  'uppercase'
+) !default;
+
+@if ($-enable-text-transform-classes and $-text-transform-class-values) {
+  @each $value in $-text-transform-class-values {
+    .u-text-transform-#{$value} {
+      text-transform: #{$value} !important;
+    }
+  }
+}
