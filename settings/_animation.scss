@@ -14,3 +14,19 @@
 
 $easing-functions: (
 );
+
+
+/// Aliased transition duration values.
+///
+/// @group spacing
+/// @prop {String} key - An alias for the duration.
+/// @prop {Number} value - The actual duration.
+/// @type Map
+///
+/// @example
+///   $transition-durations: (
+///     'fast': 100ms
+///   );
+
+$transition-durations: (
+);

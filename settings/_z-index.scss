@@ -6,8 +6,9 @@
 /// @type Map
 
 $z-indexes: (
+  'back': -2,
   'below': -1,
   'root': 0,
-  'default': 1,
-  'above': 2,
+  'above': 1,
+  'front': 2,
 );
