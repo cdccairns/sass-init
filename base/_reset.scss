@@ -24,7 +24,8 @@ h3,
 h4,
 h5,
 h6,
-address {
+address,
+cite {
   font-style: inherit;
   font-weight: inherit;
 }
@@ -45,9 +46,7 @@ table {
 }
 
 hr {
-  background-color: currentColor;
   border: 0;
-  height: 1px;
 }
 
 button,
@@ -63,10 +62,18 @@ textarea {
   display: inline-block;
 }
 
+select {
+  appearance: none;
+}
+
+option {
+  font-weight: normal;
+}
+
 textarea {
   display: block;
   overflow: auto;
-  resize: none;
+  resize: vertical;
 }
 
 @media (prefers-reduced-motion: no-preference) {
